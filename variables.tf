@@ -24,3 +24,10 @@ variable "accessing_computer_ip" {
  type = "string"
  description = "IP of the computer to be allowed to connect to EKS master and nodes."
 }
+variable "worker_instance_type" {
+  type = "string"
+  description = "Type of worker node instance"
+}
+variable "keypair_name" {
+  type = "string"
+}
