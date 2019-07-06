@@ -4,3 +4,7 @@ output "eks_kubeconfig" {
     "aws_eks_cluster.amit-eks"
   ]
 }
+
+output "lb_target_group_arn" {
+  value = "${aws_lb_target_group.amit-eks.arn}"
+}

@@ -31,3 +31,12 @@ variable "worker_instance_type" {
 variable "keypair_name" {
   type = "string"
 }
+variable "hosted_zone_id" {
+  type = "string"
+  description = "ID of the hosted Zone created in Route53 before Terraform deployment."
+}
+
+variable "hosted_zone_url" {
+  type = "string"
+  description = "URL of the hosted Zone created in Route53 before Terraform deployment."
+}

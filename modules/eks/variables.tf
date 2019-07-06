@@ -9,8 +9,11 @@ variable "cluster_name" {
 variable "keypair_name" {
   type = "string"
 }
-
-variable "app_subnet_ids" {
+variable "vpc_id" {
+  type = "string"
+  description = "ID of the VPC used to setup the cluster."
+}
+variable "public_subnet_ids" {
   type = "list"
 }
 
@@ -24,3 +27,4 @@ variable "worker_security_group_id" {
 variable "worker_instance_type" {
   type = "string"
 }
+

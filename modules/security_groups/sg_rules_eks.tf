@@ -10,7 +10,7 @@ resource "aws_security_group_rule" "workstation-https-master" {
   to_port           = 443
   type              = "ingress"
 }
-resource "aws_security_group_rule" "workstation-https-worker" {
+resource "aws_security_group_rule" "workstation-ssh-worker" {
   cidr_blocks       = ["${var.accessing_computer_ip}/32"]
   description       = "Allow workstation to communicate with the Kubernetes worker nodes directly."
   from_port         = 22

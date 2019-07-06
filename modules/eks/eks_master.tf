@@ -4,7 +4,7 @@ resource "aws_eks_cluster" "amit-eks" {
 
   vpc_config {
     security_group_ids = ["${var.master_security_group_id}"]
-    subnet_ids         = "${var.app_subnet_ids}"
+    subnet_ids         = "${var.public_subnet_ids}"
   }
 
   depends_on = [
