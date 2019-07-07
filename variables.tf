@@ -28,15 +28,15 @@ variable "worker_instance_type" {
   type = "string"
   description = "Type of worker node instance"
 }
-variable "worker_max_number" {
+variable "worker_max_size" {
   type = "string"
   description = "Maximum number of worker node instances"
 }
-variable "worker_min_number" {
+variable "worker_min_size" {
   type = "string"
   description = "Minimum number of worker node instances"
 }
-variable "worker_desired_number" {
+variable "worker_desired_size" {
   type = "string"
   description = "Desired number of worker node instances"
 }
