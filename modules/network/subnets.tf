@@ -21,18 +21,6 @@ resource "aws_subnet" "public" {
     "kubernetes.io/cluster/${var.cluster_name}" = "shared"
   }
 }
-/* resource "aws_subnet" "public_secondary" {
-  count = "${var.subnet_count}"
-  availability_zone = "${data.aws_availability_zones.available.names[count.index]}"
-  cidr_block        = "100.64.${count.index}.0/24"
-  vpc_id            = "${aws_vpc.amit-eks.id}"
-  tags = {
-    Name = "${var.cluster_name}-public_secondary-${count.index}"
-    Owner = "${var.owner}"
-    "kubernetes.io/cluster/${var.cluster_name}" = "shared"
-  }
-} */
-
 resource "aws_subnet" "private" {
   count = "${var.subnet_count}"
   availability_zone = "${data.aws_availability_zones.available.names[count.index]}"

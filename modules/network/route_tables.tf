@@ -44,12 +44,6 @@ resource "aws_route_table_association" "public" {
   subnet_id      = "${aws_subnet.public.*.id[count.index]}"
   route_table_id = "${aws_route_table.public.*.id[count.index]}"
 }
-/* resource "aws_route_table_association" "public_secondary" {
-  count = "${var.subnet_count}"
-
-  subnet_id      = "${aws_subnet.public_secondary.*.id[count.index]}"
-  route_table_id = "${aws_route_table.public.*.id[count.index]}"
-} */
 
 resource "aws_route_table_association" "private" {
   count = "${var.subnet_count}"
