@@ -26,7 +26,7 @@ USERDATA
 }
 
 resource "aws_launch_configuration" "amit-eks" {
-  associate_public_ip_address = true
+  associate_public_ip_address = false
   iam_instance_profile        = "${aws_iam_instance_profile.worker.name}"
   image_id                    = "${data.aws_ami.eks-worker.id}"
   instance_type               = "${var.worker_instance_type}"
@@ -41,7 +41,7 @@ resource "aws_launch_configuration" "amit-eks" {
 }
 
 resource "aws_lb_target_group" "amit-eks" {
-  name = "${var.cluster_name}-alb"
+  name = "${var.cluster_name}-workers"
   port = 31742
   protocol = "HTTP"
   vpc_id = "${var.vpc_id}"

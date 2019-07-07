@@ -1,0 +1,8 @@
+aws_region            = "us-east-2"
+aws_credentials_file  = "~/.aws/credentials"
+subnet_count          = "3"
+accessing_computer_ip = ""
+worker_instance_type  = "t3.medium"
+keypair_name          = ""
+hosted_zone_id        = ""
+hosted_zone_url       = ""
