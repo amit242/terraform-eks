@@ -28,6 +28,18 @@ variable "worker_instance_type" {
   type = "string"
   description = "Type of worker node instance"
 }
+variable "worker_max_number" {
+  type = "string"
+  description = "Maximum number of worker node instances"
+}
+variable "worker_min_number" {
+  type = "string"
+  description = "Minimum number of worker node instances"
+}
+variable "worker_desired_number" {
+  type = "string"
+  description = "Desired number of worker node instances"
+}
 variable "keypair_name" {
   type = "string"
 }

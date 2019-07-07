@@ -49,10 +49,10 @@ resource "aws_lb_target_group" "amit-eks" {
 }
 
 resource "aws_autoscaling_group" "amit-eks" {
-  desired_capacity     = 1
+  desired_capacity     = "${var.worker_desired_number}"
   launch_configuration = "${aws_launch_configuration.amit-eks.id}"
-  max_size             = 4
-  min_size             = 1
+  max_size             = "${var.worker_max_number}"
+  min_size             = "${var.worker_min_number}"
   name                 = "${var.cluster_name}-asg"
   vpc_zone_identifier  = "${var.public_subnet_ids}"
   target_group_arns    = ["${aws_lb_target_group.amit-eks.arn}"]
