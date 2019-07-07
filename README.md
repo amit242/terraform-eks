@@ -37,8 +37,8 @@ terraform apply -var-file=variables.tfvars
 ```bash
 terraform output eks_kubeconfig
 ```
-6. To route traffic from the ALB to the cluster, create a [traefik](https://traefik.io/) ingress controller service pointing to `nodePort: 3172`. [Example here]()
-7. For cluster autoscaling create a [cluster-autoscaler]() deployment pointing to the autoscaling group created by terraform. [Example here]()
+6. To route traffic from the ALB to the cluster, create a [traefik](https://traefik.io/) ingress controller service pointing to `nodePort: 3172`. [Example here](https://github.com/amit242/eks-k8s-configuration/blob/master/ingress-controller/traefik/traefik-ingress-service.yaml)
+7. For cluster autoscaling create a [cluster-autoscaler]() deployment pointing to the autoscaling group created by terraform. [Example here](https://github.com/amit242/eks-k8s-configuration/blob/master/cluster-autoscaler/cluster_autoscaler.yml)
 ```yaml
 ...
 command:
