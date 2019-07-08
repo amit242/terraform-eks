@@ -27,6 +27,9 @@ module "eks" {
   cluster_name              = "${var.cluster_name}"
   keypair_name              = "${var.keypair_name}"
   worker_instance_type      = "${var.worker_instance_type}"
+  worker_max_size           = "${var.worker_max_size}"
+  worker_min_size           = "${var.worker_min_size}"
+  worker_desired_size      = "${var.worker_desired_size}"
   // inputs from modules
   vpc_id                    = "${module.network.vpc_id}"
   public_subnet_ids         = "${module.network.public_subnet_ids}"
